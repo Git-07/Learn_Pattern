@@ -1,0 +1,70 @@
+/*SELECT count(p.ProductID) as counts , od.orderID from
+Products p left outer join OrderDetails od 
+on p.ProductID = od.ProductID
+group by od.OrderID
+order by counts desc; */
+        
+ /*select p.ProductName , sum(od.Quantity) as totalQuantity from
+ Products p inner join OrderDetails od on
+ p.ProductID = od.ProductID
+ group by p.ProductName
+ having totalQuantity between 200 and 300
+ order by totalQuantity desc; */
+ 
+ /*select s.SupplierName , sum(p.Price) as totalSellingAmout from 
+ Suppliers s inner join Products p on
+ s.SupplierID = p.SupplierID 
+ group by s.SupplierName
+ having totalSellingAmout> 100
+ order by totalSellingAmout desc; */
+ 
+/*
+ select distinct p.ProductName,s.SupplierName,sh.Phone,s.Address from
+ Products p inner join Suppliers s on p.SupplierID = s.SupplierID
+ inner join OrderDetails od on p.ProductID  = od.ProductID
+ inner join Orders o on o.OrderID  = od.OrderID
+ inner join Shippers sh on o.shipperID = sh.ShipperID;
+*/
+
+ /*select p.ProductName , sh.ShipperName , c.CategoryName, c.Description
+ from Products p 
+ inner join Categories c on c.CategoryID = p.CategoryID
+ inner join OrderDetails od on od.ProductID = p.ProductID
+ inner join Orders o on o.OrderID = od.OrderID
+ inner join Shippers sh on sh.ShipperID = o.ShipperID; */
+
+
+
+/*create Table Employee2(
+EmployeeID int,
+Salary int
+);*
+
+
+/*insert into Employee2(EmployeeID, Salary)
+values(3,8000);*/
+
+Select max Salary from two Employee tables 
+
+/*Select max(Salary) from
+(
+Select salary from Employee1
+Union
+Select  salary from Employee2
+) */
+
+Select the Second Max Salary from two Employee tables
+
+Select max(Salary) as SecondMax from
+(
+Select Salary from Employee1
+Union
+Select  Salary from Employee2
+)
+where Salary < (
+Select max(Salary) from
+(
+Select Salary from Employee1
+Union
+Select  Salary from Employee2
+))
