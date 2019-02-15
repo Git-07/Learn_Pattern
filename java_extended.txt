@@ -1,0 +1,29 @@
+1) final->
+
+Note : If a class is declared as final then by default all of the methods present in that class 
+are automatically final but variables are not.
+
+2) finalize method
+
+It is a method that the Garbage Collector always calls just before the deletion/destroying the object.
+Which is just a clean up activity or we can say resource de-allocation.
+
+
+3) A Java virtual machine (JVM) is a virtual machine that enables a computer to run Java programs 
+as well as programs written in other languages that are also compiled to Java bytecode.
+
+
+*Which one suits better depends on the application 
+
+-Interfaces are useful because Java classes will not support multiple inheritance but interfaces do.
+
+-Abstract classes are useful when you need concrete behavior from the base class.
+
+4) Inheritance -> is run a time polymorphism (can be overload or override)
+
+5) Polymorphism -> Polymorphism is the capability of a method to do different things based on the 
+object that it is acting upon (method overloading and method overriding )
+
+In HashMap, null values are allowed for key and values, whereas in 
+ConcurrentHashMap null value is not allowed for key and value, otherwise 
+we will get Run-time exception saying NullPointerException.
