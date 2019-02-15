@@ -1,0 +1,285 @@
+1)HashMap->
+
+Note ->  Map interface is a part of Java Collection Framework, but it doesn’t inherit Collection Interface.
+Thats why whenever there is HashMap . There is no iterator because HashMap doesnot inherit Collection Interface.
+
+HashMap is a Map based collection class that is used for storing Key & value pairs, it is denoted as HashMap<Key, Value> or HashMap<K, V>. 
+Java HashMap class implements the map interface by using a hashtable. It inherits AbstractMap class and implements Map<K,V>, Cloneable, Serializable  
+unsynchronized and permits nulls(null values and null key).
+
+Hashtable
+
+Java Hashtable class implements a hashtable, which maps keys to values. It inherits Dictionary class and implements the Map interface.
+public class Hashtable<K,V> extends Dictionary<K,V> implements Map<K,V>, Cloneable, Serializable  
+synchronized and doesnot permits nulls(null values and null key).
+
+diff b/w HashMap and HashTable --->
+
+HashMap allows maximum one null key and any number of null values. Where as HashTable doesn’t allow even a single null key and null value.
+
+Hashtable is synchronized, whereas HashMap is not. This makes HashMap better for non-threaded applications, 
+as unsynchronized Objects typically perform better than synchronized ones.
+
+Collection : The root interface of Java Collections Framework.
+
+Collections : A utility class that is a member of the Java Collections Framework.
+
+Collection interface extends Iterable interface which is a member of java.lang package. 
+Iterable interface has only one method called iterator(). It returns an Iterator object, using that object you can iterate over the elements of Collection.
+
+
+a)Collections in java is a framework that provides an architecture to store and manipulate(like add few more objects to the list after the list )
+b)Java Collection framework provides many interfaces (Set, List, Queue, Deque etc.) and 
+classes (HashMap,ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet etc).
+
+d)Set interface contains only methods inherited from Collection interface. It does not have it’s own methods.
+But, applies restriction on methods so that duplicate elements are always avoided.
+
+d)ArrayList class implements "List" interface and extends "AbstractList". It also implements 3 marker interfaces – RandomAccess, Cloneable and Serializable.
+
+ArrayList v/s Vector
+1)A Vector defaults to doubling the size of its array, while the ArrayList increases its array size by 50 percent.
+2)The difference is that access to a Vector is synchronized, whereas access to an ArrayList is not.
+3)Vector class has only one advantage over ArrayList i.e it is thread safety.
+But, you can achieve thread safe ArrayList by using synchronizedList() method of Collections class
+
+3)ArrayList, HashSet and HashMap are three most frequently used data structures in java.
+As they are most used, they are not synchronized for the sake of performance.
+But, java provides the methods to make them synchronized as and when the need arises. These methods are introduced in java.util.Collections class.
+Collections class is an utility class which has some useful methods helpful for operations on collection types.
+Collections.synchronizedList()---> ArrayList;
+Collections.synchronizedSet() ---> HashSet;
+Collections.synchronizedMap() ---> HashMap;
+
+
+
+3) Final Method can be Inherited to child class but cant be overriden.
+
+
+4) Inheritance -> The Superclass reference variable can hold the subclass object, 
+but using that variable you can access only the members of the superclass, 
+so to access the members of both classes it is recommended to always create reference variable to the subclass but of type super class.
+Note->reference variable to super object to sub class.
+
+
+5)Exception handling
+
+a)ArrayIndexOutOfBound Exception
+b)NumberFormat Exception
+c)Null Pointer Exception
+d)Arithmetic Exception
+
+Projects->
+
+1)NoAlertPresentException
+2)NoSuchFrameException
+3)NoSuchElementException
+4)UnreachableBrowserException : Error communicating with the remote browser. It may have died.
+5)SessionNotFoundException: Unexpected error launching Internet Explorer(or any browser).
+6)ElementNotVisibleException: element not visible: Element is not currently visible.
+7)WebDriverException ->Thrown when an unexpected alert is appeared. 
+Usually raised when when an expected modal is blocking webdriver from executing any more commands.
+
+
+try block : In try block, keep those statements which may throw exceptions during run time.
+
+catch block : This block handles the exceptions thrown by try block. It takes one argument of type java.lang.Exception.
+
+finally block : Whether exception is thrown or not and thrown exception is caught or not, this block will be always executed.
+1) If finally block returns a value then try and catch blocks may or may not return a value.
+
+2) If finally block does not return a value then both try and catch blocks must return a value.
+
+
+e)The NotFoundException is a super class which includes the subclass NoSuchElementException
+
+
+
+
+
+h)The order of catch blocks should be from most specific to most general ones. i.e Sub classes of Exception must come first and super classes later
+If you keep the super classes first and sub classes later, you will get compile time error : Unreachable Catch Block.
+
+i)Below is the correct way of writing :
+public class ExceptionHandling
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            int i = Integer.parseInt("abc");   //This statement throws NumberFormatException
+        }
+ 
+        catch(NumberFormatException ex)
+        {
+            System.out.println("This block handles NumberFormatException");
+        }
+ 
+        catch(Exception ex)
+        {
+            System.out.println("This block handles all exception types");
+        }
+ 
+        catch (Throwable ex)
+        {
+            System.out.println("Throwable is super class of Exception");
+        }
+    }
+}
+
+j) Throws Keyword:
+If a method is capable of throwing an exception that it could not handle, then it should specify that exception using throws keyword. 
+It helps the callers of that method in handling that exception.
+
+k)There are two types of Exception : 
+1)Checked
+2)Unchecked
+
+1) Checked Exceptions : Checked exceptions are the exceptions which are known during compile time.
+
+These are the exceptions that are checked at compile time. They are also called compile time exceptions.
+All sub classes of java.lang.Exception Class except sub classes of RunTimeException are checked exceptions.
+
+2) Unchecked Exceptions :
+
+Unchecked exceptions are the exceptions which are known  at run time. 
+They can not be known at compile time because they occur only at run time. That’s why they are also called Run Time Exceptions.
+All sub classes of RunTimeException and sub classes of java.lang.Error
+
+L) How to take screen shot in selenium
+1) first conver the WebDriver reference to the TakesSceenshot Interface
+2) As File Class implements TakeScreenshot Interface. So using the refernce we created now we will invoke .getScreenshotAs(OutType.File) of File class
+3) To store the file in the desired path. For this we will use File
+
+Strings ->
+If you make any class as final, you cannot extend it means you cannot override it means no inheritance no overridden.
+String is a derived type.
+String is a final class in java.lang package which is used to represent the set of characters in java.
+strings have been made immutable in java. Means can not be changed once declared because of String being final class.
+
+The main similarity between String and StringBuffer class is that both are thread safe.
+The main difference between them is that String objects are immutable where as StringBuffer objects are mutable
+
+The main similarity between StringBuffer and StringBuilder class is that both produces mutable string objects.
+The main difference between them is that StringBuffer class is thread safe(synchronization) where as StringBuilder class is not thread safe.
+
+Use of this keyword:
+1)this can be used to refer current class instance variable.
+2)if parameters or arguments and instance variables are same.
+
+In the below prgram called parameterized constructor from default constructor:
+So, we are using this keyword to distinguish local variable and instance variable.
+class A{  
+A(){  // constructor
+this(5);  
+System.out.println("hello a");  
+}  
+A(int x){    // parameterized constructor of int arg
+System.out.println(x);  
+}  
+A(double y){   // parameterized constructor of double type arg
+syso("hello b");
+}
+}  
+class TestThis6{  
+public static void main(String args[]){  
+A a=new A();  
+}}  
+
+If the program would be like below one:
+class A{  
+A(){  
+this(5);  
+this(20.32);   // here this is not the first statement in Constructor
+System.out.println("hello a");  
+}  
+A(int x){ 
+this(20.32); 
+System.out.println(x);  
+} 
+A(double y) {
+System.out.println(y);
+}
+}  
+class TestThis6{  
+public static void main(String args[]){  
+A a=new A();  
+}}  
+
+
+3)Compile time error :
+
+.202/TestThis6.java:4: error: call to this must be first statement in constructor
+this(20.32);
+^
+1 error
+
+4)navigate().refresh() – This command lets the user to refresh the current web page there by reloading all the web elements.
+
+Sample code:
+driver.navigate().refresh();
+
+
+Test NG Annotations:
+1)@BeforeTest -> It will execute before all test in the test suite
+2)@AfterTest ->  It has its scope only till the test folder. It executed after all the test has been executed in the test folder.
+
+
+12.How to import test cases from Excel / Word  to Quality Center?
+
+1.Install and Configure the Microsoft Excel / Word Add-In for Quality Center.
+
+2. Map the Columns in  Word / Excel spreadsheet with Columns available  in  Quality Center
+
+3.Export the data from Word/Excel to Quality Center Using Tools >Export to Quality Center Option in Word/Excel.
+4. Rectify errors if Any.
+
+
+
+13 SRS(Software Requirements Specification)
+This includes the purpose, scope, functional and nonfunctional requirements, software and hardware requirements of the project. 
+In addition to this, it also contains the information about environmental conditions required, safety and security requirements,
+software quality attributes of the project etc.
+
+14.Alert regarding info->
+two types of alerts:
+
+1)Windows-based alert pop-ups
+2)Web-based alert pop-ups
+
+a)As we know that handling windows based pop-ups is beyond WebDriver’s capabilities,
+thus we would exercise some third-party utilities to handle window pop-ups.
+
+b)So now let’s handle a window based pop up using Robot class.
+
+Robot class is a java based utility which emulates the keyboard and mouse actions.
+
+
+
+
+---------------------------------
+1)Challenges faced -> Making the script to deal with real tme scenarios like making a sever restart req should not stop execution or start execution from there.
+
+2)Data reading from excel in a way that running the test cases which we want to run and reading the data from sheet 
+in such a way that we dont have to pass row or col no just the test case id and col number. This is becoz if we are maintaining a huge test data so 
+to handle the scenarios where the col can be cut and pasted to sm other col
+
+
+=======================================================================================================
+
+1)Constructors show inheritance like when we make an instance of child class then the constructor of the parent class gets invoked first.
+A by default call to the parent class constructor i.e. super(); which makes call to the parent class constructor.
+
+“modifier static not allowed here in case of Constructors”
+
+Everything that is marked static belongs to the class only, for example static method cannot 
+be inherited in the sub class because they belong to the class in which they have been declared.
+
+Since each constructor is being called by its subclass during creation of the object of its subclass, 
+so if you mark constructor as static the subclass will not be able to access the constructor of its parent class 
+because it is marked static and thus belong to the class only. This will violate the whole purpose of inheritance concept and 
+that is reason why a constructor cannot be static.
+
+======================================================================================================================
+
+//table[@id='spPopupTable']/descendant::td[text()='{Token_RiskState}']/following-sibling::td[text()='{Token_AgencyName}']
