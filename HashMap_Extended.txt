@@ -1,0 +1,46 @@
+
+1)Hash Map works on the principle of hashing means HashMap get(key k) call hashcode method on the Key Object
+and applies the returned hashvalue to its own static hash function to find a bucket location
+
+for eg ->
+
+System.out.println(record.get(key.get(5)));
+
+below is to iterate over HashMap            HashMap
+                                               |
+      for (Map.Entry<String, String> pair : record.entrySet()) {		
+			//if(pair.getKey().equals(tcId)){
+			System.out.println(pair.getKey() + "->" + pair.getValue());
+			c= pair.getValue();
+							
+	  //}
+	}
+
+2)When to use HashMap ?  answer is if your application do not require any multi-threading task, 
+in other words HashMap is better for non-threading applications. Hashtable should be used in 
+multithreading applications. 
+
+========================
+Internal working of Hash Map
+
+it works on the principle of Hashing
+1) Hashing is a process of converting an object into integer form by using the method hashCode().
+2) hashCode() method   is used to get the hash Code of an object and returns the memory reference of object in integer form.
+So hashcode value is nothing but the memory reference of the onject
+3) equals() method is used to check that 2 objects are equal or not.This mrthod reurns true if equal else false.
+4) 
+
+We can make the HashMap as synchronized by calling this code
+Map m = Collections.synchronizedMap(new HashMap());
+
+below is to iterate over HashMap usin key           
+
+ Map<String,String> map = new HashMap<String,String>();
+
+ Set<String> keyset = map.keySet();
+
+ for(String key : keyset){
+
+ sop(map.get(key)) -> this will give value correcsponding to the realated key.
+
+ }
