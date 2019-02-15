@@ -1,0 +1,40 @@
+Groovy methods
+
+1)
+
+
+
+Groovy Variables ->
+
+1) Log->
+
+Use to print any thing in console
+log.info "Hello this is the first groovy script"
+
+2) Context ->
+it is used to manipulate and to accesss the variable and properties of your test case.
+Scope of this variable lies only in Test case
+
+
+3) testRunner
+to access any porperty u have to come thru its parent only
+
+
+
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">
+   <soap:Header/>
+   <soap:Body>
+      <typ:addEmployee>
+         <!--Optional:-->
+         <typ:name></typ:name>
+         <!--Optional:-->
+         <typ:id></typ:id>
+         <!--Optional:-->
+         <typ:Department></typ:Department>
+         <!--Optional:-->
+         <typ:age>?</typ:age>
+      </typ:addEmployee>
+   </soap:Body>
+</soap:Envelope>
+
