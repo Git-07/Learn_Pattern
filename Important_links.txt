@@ -1,0 +1,7 @@
+Important links ->
+1)To fix SSL Error in Git cloning
+
+https://mattferderer.com/fix-git-self-signed-certificate-in-certificate-chain-on-windows
+
+
+=====
