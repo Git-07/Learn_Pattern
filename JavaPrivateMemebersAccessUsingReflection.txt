@@ -1,0 +1,26 @@
+package com.package1;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+class PrivateMemberClass{
+	
+	private int a = 10;
+	private String s = "Monday";	
+	private void privateMethod(){
+		System.out.println("Inside private method");
+	}
+}
+
+public class ReadPrivateMembersOutsideOfClass {
+	public static void main(String[] ar) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException{
+	PrivateMemberClass pmc = new PrivateMemberClass();
+	Method m = PrivateMemberClass.class.getDeclaredMethod("privateMethod");
+	m.setAccessible(true);
+	m.invoke(pmc);
+    Field f = PrivateMemberClass.class.getDeclaredField("a");
+    f.setAccessible(true);
+    System.out.println(f.get(pmc));
+	}
+}
