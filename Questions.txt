@@ -1,0 +1,17 @@
+1.Pyramid in testing and what is its benefit->
+to identify defect at lower or initial phase which are cheaper to write and maintain and 
+quicker to run whereas tests on the upper levels are more expensive to write and maintain
+and slower to run.
+ 
+2.Bug prioirty and bug severity ->
+
+3.selenium Grid in deep -> 
+4.Conflict in git (study the git completely)
+5.Which part of Automation will be done first -> Where the things are stable
+6.Diff bw git and git hub
+7.What is the diff bw Authentication and authorization -> read from
+https://www.okta.com/identity-101/authentication-vs-authorization/
+8.The work process and your role.
+9.How u interact with dev team and BA
+10.need of design pattern in Automation framework -> Study it from devbridge
+

@@ -1,0 +1,17 @@
+SOAP -> 
+
+200 ok
+104 to 106 Parameter validation error
+108 Malformed xml
+302 Authentication failed
+303 incorrect privileges
+
+Restfull ->
+
+200 ok
+400 bad request
+401 Unauthorized
+404 Not found
+405 Method not allowed
+500 Internal server error
+503 service Unavailable
